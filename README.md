@@ -34,7 +34,7 @@ The data gathering code is based on [NewsScraper](https://github.com/holwech/New
 
 ## Visualisation
 
-Our data visualisation uses the [D3](www.d3js.org) JavaScript framework. Articles with a high similarity (>75%) are connected with a thick line. Articles with smaller similiarity values have thinner lines connecting them.
+Our data visualisation uses the [D3](www.d3js.org) JavaScript framework. Articles with a high similarity (>75%) are connected with a thick line. Articles with smaller similarity values have thinner lines connecting them.
 
 # "Infinite Monkeys?"
 

@@ -7,6 +7,10 @@ from multiprocessing import Pool
 from typing import Any
 
 def get_article(i:int, article: Any) -> Any:
+    '''
+    Retrieve articles and return them as a dictionary containing
+    each article's URL, title, and body text. 
+    '''
     linkText = get(article['url'], headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'})
 
     try:
@@ -25,6 +29,12 @@ def get_article(i:int, article: Any) -> Any:
     return article_dict
 
 def main(query: str = None, max_page: int = 4, page_size: int = 100):
+    ''' 
+    Retrieve latest articles from NewsAPI and write them to a JSON
+    file. 
+    '''
+
+    # Replace <api key> with your unique key for accessing NewsAPI.
     newsapi = NewsApiClient(api_key='<api key>')
 
     article_dicts = []
@@ -35,7 +45,8 @@ def main(query: str = None, max_page: int = 4, page_size: int = 100):
             page=page,
         )['articles']
 
-        if len(articleList) == 0 or len(article_dicts) >= max_page * page_size:
+        if len(articleList) == 0 or
+        len(article_dicts) >= max_page * page_size:
             break
 
         with Pool(25) as p:

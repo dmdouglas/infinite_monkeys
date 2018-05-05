@@ -17,6 +17,11 @@ body {
   font: 9px sans-serif;
 }
 
+d3-tip {
+    line-height: 1;
+    color: black;
+}
+
 .h3 {
   margin-left:40px;
 }
