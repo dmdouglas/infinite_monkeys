@@ -1,5 +1,5 @@
 body {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .links line {
@@ -17,11 +17,22 @@ body {
   font: 9px sans-serif;
 }
 
-d3-tip {
+.d3-tip {
     line-height: 1;
     color: black;
+    font: 9px sans-serif;
 }
 
 .h3 {
   margin-left:40px;
+}
+
+.footer {
+    position:relative;
+}
+
+.news_api{
+    position:absolute;
+    bottom:0;
+    right:0;
 }
