@@ -100,3 +100,7 @@ ENV/
 # mypy
 .mypy_cache/
 *.json
+
+# News items
+news_articles_.json
+scraped_articles.json
